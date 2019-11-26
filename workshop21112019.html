@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Layout</title>
+	<style>
+		body{
+			margin: 0;
+			padding: 0;
+		}
+		header{
+			background-color: blue;
+			color: white;
+			height:50px;
+		}
+		#mainContent{
+			max-width: 1200px;
+			margin:0 auto;
+		}
+		aside{
+			width: 200px;
+			background-color: red;
+			padding: 4px; 
+			box-sizing: border-box;
+			display: inline-block;
+			float: left;
+		}
+		aside .navBtn{
+			width: 100%;
+			box-sizing: border-box;
+			height:40px;
+			margin:3px 0px;
+			background-color: white;
+			border:1px solid gray;
+			border-radius: 8px;
+			
+		}
+		main{
+			height: 300px;
+			background-color: green;
+			
+			width: calc(100% - 200px);
+			display: inline-block;
+		}
+		
+	</style>
+</head>
+<body>
+	<div id="mainContent">
+<header>
+	
+</header>
+<aside>
+	<button class="navBtn">A</button>
+	<button class="navBtn">B</button>
+	<button class="navBtn">C</button>
+	<button class="navBtn">D</button>
+	<button class="navBtn">E</button>
+	
+</aside>
+<main>
+	<footer>
+		
+	</footer>
+</main>
+	</div>
+</body>
+</html>
