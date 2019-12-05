@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Layouting homework</title>
+	<style>
+		*{
+			box-sizing: border-box;
+		}
+		.column{
+			width: 400px;
+			text-align: center;
+			display: block;
+			border: 1px solid transparent;
+			margin-right: 10px;
+			margin-bottom: 1px;
+			float: left;
+
+		}
+		.row::after {
+  			content: "";
+  			clear: both;
+  			display: table;
+
+		}
+		.button1{
+			border-color: black;
+			background-color: black;
+			color: white;
+			font-weight: bold;
+			padding-bottom: 10px;
+			padding-top: 10px;
+			padding-left: 30px;
+			padding-right: 30px;
+			font-family: "Arial Black", Gadget, sans-serif;
+		}
+		
+		.button2{
+			border-color: black;
+			background-color: white;
+			color: black;
+			font-weight: bold;
+			padding-bottom: 10px;
+			padding-top: 10px;
+			padding-left: 30px;
+			padding-right: 30px;
+			border-width: 1px;
+			font-family: "Arial Black", Gadget, sans-serif;
+			
+
+		}
+		
+		.text{
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: x-large;
+		}
+
+		.text2{
+			font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+			color: grey;
+			font-size: 16px;
+		}
+				
+	</style>
+</head>
+<body>
+	<div class="row">
+		<div class="column">
+			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSQvw79sXFY-bM8_r5E6kzFgFfHQmHSdpHHMQdajiODDNf31cX&s" alt="shopping" style="width: 70%">
+			<p class="text">Wild West Hoodie</p>
+			<i class="fa fa-star" style="font-size:20px;color:#ffaa00">
+				<pr style="font-size:18px;color:grey">       5.0</pr>
+			</i>
+			<i class="fa fa-heart" style="font-size:20px;color:#f0f0f5;padding-left:25px">
+				<pr style="font-size:18px;color:grey">       29</pr>
+			</i>
+			<p class="text2">Lorem ipsum dolor sit amet, consestetur adipisicing</p>
+			<div>
+				<button class="button1">CART</button>
+				<button class="button2" style="margin-left: 10px">VIEW</button>
+			</div>
+		</div>
+
+		<div class="column">
+			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTDit5wfeAuw2w15XoCEE7aVK21e4zmgzd3g_BWC7-3fFqZHlD&s" alt="man" style="width: 90%">
+			<p class="text">Wild West Hoodie</p>
+			<i class="fa fa-star" style="font-size: 20px; color: #ffaa00">
+				<pr style="font-size:18px;color:grey">       5.0</pr>
+			</i>
+			<i class="fa fa-heart" style="font-size:20px;color:red;padding-left:25px">
+				<pr style="font-size:18px;color:grey">       29</pr>
+			</i>
+			<p class="text2">Lorem ipsum dolor sit amet, consestetur adipisicing</p>
+			<div>
+				<button class="button1">CART</button>
+				<button class="button2" style="margin-left: 10px">VIEW</button>
+			</div>
+		</div>
+
+		<div class="column">
+			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvAiOp6e_6RcwDK5HuwqIMRPXTuKwMjDnUTmxwQAcgyj6D3Gxc&s" alt="girl" style="width: 105%">
+			<p class="text">Wild West Hoodie</p>
+			<i class="fa fa-star" style="font-size:20px;color:#ffaa00">
+				<pr style="font-size:18px;color:grey">       5.0</pr>
+			</i>
+			<i class="fa fa-heart" style="font-size:20px;color:#f0f0f5;padding-left:25px">
+				<pr style="font-size:18px;color:grey">       29</pr>
+			</i>
+			<p class="text2">Lorem ipsum dolor sit amet, consestetur adipisicing</p>
+			<div>
+				<button class="button1">CART</button>
+				<button class="button2" style="margin-left: 10px">VIEW</button>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>

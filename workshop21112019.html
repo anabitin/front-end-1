@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Layout</title>
+	<link rel="stylesheet" type="text/css" href="MyStyles.css">
 	<style>
 		body{
 			margin: 0;
@@ -41,6 +42,24 @@
 			width: calc(100% - 200px);
 			display: inline-block;
 		}
+		main footer {
+			text-align: center;
+			background-color: lightgrey;
+			height: 30px;
+			line-height: 30px;
+		}
+
+		.x.y{}
+		.x .y{}
+		.x > .y{}
+		.x,.y{}
+		#fixed{
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			text-align: center;
+		}
 		
 	</style>
 </head>
@@ -50,18 +69,36 @@
 	
 </header>
 <aside>
-	<button class="navBtn">A</button>
-	<button class="navBtn">B</button>
-	<button class="navBtn">C</button>
-	<button class="navBtn">D</button>
-	<button class="navBtn">E</button>
+	<button class="navBtn">1</button>
+	<button class="navBtn">2</button>
+	<button class="navBtn">3</button>
+	<button class="navBtn">4</button>
+	<button class="navBtn">5</button>
 	
-</aside>
+</aside> 
 <main>
-	<footer>
-		
-	</footer>
+	<div id="content">
+		<p>edrfg</p>
+		<p>edrfg</p>
+		<p>edrfg</p>
+		<p>edrfg</p>
+		<p>edrfg</p>
+		<p>edrfg</p>
+		<p>edrfg</p>
+		<p>edrfg</p>
+		<p>edrfg</p>
+		<p>edrfg</p>
+
+		<footer>
+		<span>Copyright &copy; 2019</span>
+	</footer></div>
+	
 </main>
 	</div>
+
+	<footer id="fixed">
+		<button>Call</button>
+		<button>Map</button>
+	</footer>
 </body>
 </html>
