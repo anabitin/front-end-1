@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Keyboards Event</title>
+	<script>
+		function updateName(elem, event) {
+			var valoare = elem.value; /*returneaza text functia ".value*/
+			var nameSpan = document.querySelector("#nameSpan");
+			nameSpan.innerText = valoare;
+			
+			
+
+
+		}
+	</script>
+</head>
+<body>
+	<p>Salut, <span id="nameSpan"></span></p>
+	<form>
+		<input type="text" oninput="updateName(this, event);" />
+	</form>
+</body>
+</html>

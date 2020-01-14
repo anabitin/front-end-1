@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercitii</title>
+	<script>
+		/* Function that returns an array containing the positions of the largest value from an array given as parameter*/
+
+		function largestValueArray (arr) {
+			var max = arr[0];
+			for (var i=1; i<arr.length; i++){
+				if(max<arr[i]){
+					max=arr[i];				
+			}
+		}
+			var pos = [];
+			for (var i=0; i<arr.length; i++){
+				if (max===arr[i]){
+					pos.push(i);
+				}
+			}
+return pos;
+}
+
+
+/*Function that takes 1 parameter: an array and returns the largest difference between 2 adiacent values in the array*/
+
+function maxDifference (arr){
+	var maxdif = arr[0]-arr[1];
+	for (var i = 1; i < arr.length-1; i++) {
+		if(maxdif<arr[i]-arr[i+1{
+			maxdif=arr[i]-arr[i+1];
+		}
+	}
+	return maxdif;
+}
+
+/* Function that takes 2 parameters: an array and a number N. Return the value of the Nth largest value*/
+
+function LargestValue (arr, oldMax){
+	var value = -Infinnity;
+	for (var i = 0; i < arr.length; i++) {
+		if( arr[i]<oldMax){
+			if(value<arr[i]){
+				value=arr[i];
+			}
+		}
+	}
+	return value;
+}
+function LargestValue1 (arr, n){
+	var value = Infinnity;
+	for(var i=0;i<n;i++){
+		value=LargestValue (arr,value)
+	}
+} return value;
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Variables</title>
+	<script>
+
+		function indiceMasaCorporala (greutate, inaltime) {
+			var indiceMasaCorporala = greutate / inaltime / inaltime;
+			var mesaj = "lagreutatea de " + greutate+ " si inaatimea de "+ inaltime+ " esti";
+			console.log(indiceMasaCorporala);
+
+		if (indiceMasaCorporala<20) {
+			return mesaj + "subponderal";
+		} else if (indiceMasaCorporala<25) {
+			return mesaj + "felicitari!";
+
+		} else if (indiceMasaCorporala<30) {
+			return mesaj + " supraponderal"
+		} else if (indiceMasaCorporala<40) {
+			return mesaj + " obez"
+		} else {
+			return mesaj + "du-te la doctor";
+		}
+
+	
+
+
+		var varsta = 29;
+		var prenume = "Ana";
+		var nume = "Bitin";
+		var greutate = 60.5;
+		var inaltime = 1.75;
+		var studenti = [
+		"Ion",
+		"Alexandru",
+		"Maria",
+		"Radu",
+		"Ana",
+		"Mihai",
+		"Andrei"
+		];
+		varsta = varsta - 20;
+		varsta = varsta * 2;
+		varsta = varsta / 2;
+		varsta = varsta + 2;
+
+
+		
+
+
+
+
+		
+
+		var indiceleMeu = indiceMasaCorporala (65, 1.73);
+		console.log (indiceleMeu);
+
+		console.log (indiceMasaCorporala (75, 1.73));
+		console.log (indiceMasaCorporala (90, 1.73));
+		console.log (indiceMasaCorporala (95, 1.73));
+		console.log (indiceMasaCorporala (100, 1.73));
+
+
+		for (var i = 1; i <=100; i++) {
+			console.log(indiceMasaCorporala (i, 1.73));
+		}
+		for (var i = 1; i <=100; i+=5) {
+			console.log(indiceMasaCorporala (i, 1.73));
+		}
+		for (var i = 1; i <=97; i+=5) {
+			console.log(indiceMasaCorporala (i, 1.73));
+		}
+
+		var i=1;
+		if(i<=100){
+			console.log(indiceMasaCorporala (i, 1.73)); 
+			i++
+		}
+		if(i<=100){
+			console.log(indiceMasaCorporala (i, 1.73)); 
+			i++}
+
+		
+
+
+		
+
+
+
+	</script>
+
+
+	vsrsta +=5;
+		//varsta = varsta + 5;
+		varsta++;
+		//varsta = vartsta + 1;
+		varsta -=5;
+		//varsta = varsta - 5;
+	
+</head>
+<body>
+	<div id="mainContent">
+<header>
+	
+</header>
+<aside>
+	<button class="navBtn">1</button>
+	<button class="navBtn">2</button>
+	<button class="navBtn">3</button>
+	<button class="navBtn">4</button>
+	<button class="navBtn">5</button>
+	
+</aside> 
+<main>
+	<div id="content">
+		<p>edrfg</p>
+		<p>edrfg</p>
+		<p>edrfg</p>
+		<p>edrfg</p>
+		<p>edrfg</p>
+		<p>edrfg</p>
+		<p>edrfg</p>
+		<p>edrfg</p>
+		<p>edrfg</p>
+		<p>edrfg</p>
+
+		<footer>
+		<span>Copyright &copy; 2019</span>
+	</footer></div>
+	
+</main>
+	</div>
+
+	<footer id="fixed">
+		<button>Call</button>
+		<button>Map</button>
+	</footer>
+</body>
+</html>

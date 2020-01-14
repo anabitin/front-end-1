@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Validare Formulare</title>
+	<style>
+		.invalid{
+			border: red;
+		}
+	</style>
+	<script>
+		function validare(){
+			var nume = document.querySelector("[name='Nume_Client']").value;
+			if(nume.length<3){
+				document.querySelector
+
+			}
+		}
+	</script>
+
+</head>
+<body>
+	<form onsubmit="validare();">
+		<fieldset>
+			<legend>Detalii Cilent</legend>
+			<label for="Nume_Client">Nume Client </label><input id="Nume_Client" type="text" name="numeClient"> <br>
+			<label >Termeni si Conditii</label><input id="Terms" type="checkbox" name="termeniConditii">
+
+
+			<input type="submit">
+
+		</fieldset>
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Click On</title>
+	<script>
+		var colors = ["red", "green", "blue", "magenta", "orange", "pink", "cyan", "yellow", "gold"]
+		function IncrementCounter(){
+			var counterSpan = document.querySelector("#counter");
+			var counterBtn = document.querySelector("#counterBtn");
+			//counterSpan.innerText - modifica tot ce este intre Taguri, dar ce setez eu, il considera text
+			//counterSpan.InnerHTML - considera codul ca fiind bucata de HTML
+			var oldValue = Number(counterSpan.innerText);
+			counterBtn.style.backgroundColor = colors[oldValue % colors.length];
+			counterSpan.innerText = oldValue + 1;
+		}
+	</script>
+
+</head>
+<body>
+	<p>Ai dat Click pe buton de <span id="counter"> 0 </span>ori</p>
+	<button id="counterBtn" onclick="IncrementCounter()">Click me!</button>
+</body>
+</html>

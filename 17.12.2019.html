@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Obiecte</title>
+	<script>
+		var persoana ={
+			nume: "Bitin",
+			prenume: "Ana",
+			dataNasterii: "1990-06-20",
+			dataN:"1990,05,20"
+			inaltime: 1.74,
+			instructor: true,
+
+		}
+
+
+		//json = java script object notation
+
+
+		var elevi = [
+			{
+				nume: "ion",
+				note: [5,10,2],
+				teza: 8
+			},
+			{
+				nume: "ion1",
+				note: [6,10,8],
+				teza: 9
+			},
+				{
+				nume: "ion2",
+				note: [8,10,8],
+				teza: 10
+			},
+
+				{
+				nume: "ion3",
+				note: [9,10,2],
+				teza: 8
+			},
+
+				{
+				nume: "ion4",
+				note: [5,10,7],
+				teza: 6
+			},
+				{
+				nume: "ion5",
+				note: [5,8,2],
+				teza: 7
+			}
+			
+
+		];
+
+		function medie (note, teza){
+			var sum = 0;
+			for (var i = 0; i < note.length; i++) {
+				sum+=note[i];
+			}
+			var medieNoteFaraTeza = sum/note.length;
+			medieNoteFaraTeza = Math.round (medieNoteFaraTeza*100)/100;
+			var mediaFinala = (medieNoteFaraTeza*3+teza)/4
+			return mediaFinala;
+		}
+
+		for (var i = 0; i < elevi.length; i++) {
+			console.log(elevi[i].nume, medie(elevi[i].note, elevi[i].teza));
+		}
+		
+
+		if(x==="laptop"){
+			//.......
+		}else if(x==="desktop"){
+			else if(x==== "monitor")
+		}
+	switch(x){ 
+		case"laptop":
+		break;
+		case "laptop":
+		break......
+		default:
+	}
+
+
+	var azi = new Date();
+	var ieri = new Date(2019,12,16);
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Acordeon</title>
+	<style>
+		.active{
+			background-color: blue;
+		}
+		.hidden{
+			display: none;
+		}
+	</style>
+	<script>
+		function showPage(index){
+		document.querySelector("button.active").classList.remove("active");
+		document.querySelector(".page:not(.hidden)").classList.add("hidden");
+
+		document.querySelectorAll("button")[index-1].classList.add("active");
+		document.querySelectorAll(".page")[index-1].classList.remove("hidden");
+
+
+
+		}
+	</script>
+</head>
+<body>
+	<div>
+		<button onclick="showPage(1)">Selection 1</button>
+		<br>
+		<div id="page1" class="hidden page">PAgina 1</div>
+		<button onclick="showPage(2)">Selection 2</button>
+		<br>
+		<div id="page2" class="hidden page">Pagina 2</div>
+		<button onclick="showPage(3)" class="active"> Selection 3</button>
+		<br>
+		<div id="page3" class="page">pagina 3</div>
+		<button onclick="showPage(4)">Selection 4</button>
+		<br>
+		<div id="page4" class="hidden page">Pagina 4</div>
+		<button onclick="showPage(5)">Selection 5</button>
+		<br>
+		<div id="page5" class="hidden page">Pagina 5</div>
+	</div>
+
+</body>
+</html>

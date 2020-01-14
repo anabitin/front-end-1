@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sir de caractere inversate</title>
+	<script>
+		function inversa(str){
+			var strInvers = "";
+			for (var i=str.length-1; i>=0; i--){
+				strInvers+=str[i];
+			}
+			return strInvers;
+		}
+		console.log(inversa("ABCDEF"));
+
+		function palindrom (str){
+			return str===inversa(str);
+		}
+
+		function palindrom1 456(str){
+			for(var i=0; i<str.length; i++){
+				if(str[i]!==str[str.length-i-1]){
+					return false;
+				}
+			}
+			return true;
+		}
+		console.log (palindrom("ABCCBA"));
+		console.log (palindrom("ABCBA"));
+		console.log (palindrom("ABDCBA"));
+		console.log (palindrom("ABCDDDCBA"));
+		console.log (palindrom("ABCEBA"));
+	</script>
+</head>
+<body>
+
+</body>
+</html>

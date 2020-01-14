@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercitii</title>
+	<style>
+		
+	</style>
+	<script>
+		var culaore = ["green"]
+		function valoare(){
+			var input1 = (document.querySelector("#number1").value);
+			var input2 = (document.querySelector("#number2").value);
+
+			if(input1<input2) {
+				document.querySelector("#number2").classList.add("culoare");
+				document.querySelector("#number1").classList.remove("culoare");
+			}
+
+				if(input1>input2){
+				document.querySelector("#number1").classList.add("culoare");
+				document.querySelector("#number2").classList.remove("culoare");
+				}
+					if(inpu1===input2) return{
+						number1,number2.style.backgroundColor = culaore;
+					}
+
+				}
+		
+		
+	</script>
+</head>
+<body>
+	<input id="number1" type="text">
+	<input id="number2" type="text">
+	<button id="btn" onclick="valoare()">Apasa-ma!</button>
+
+</body>
+</html>
