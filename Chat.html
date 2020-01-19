@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chat</title>
+	<style>
+		html, body{
+				width:100%;
+				height:100%;
+				margin:0;
+				padding:0;
+				
+		}
+		 body{
+		 	display:flex;
+			flex-direction: column;
+
+		 }
+		#displayArea{
+			display: flex 1;
+			background-color:grey;
+		}
+		
+		#chatArea{
+			display:flex;
+			align-items: stretch ;
+		}
+		#messageBox{
+			flex:1;
+			min-height:50px;
+			max-height:100px;
+		}
+		#textBox{
+			display:flex;
+			align-items: stretch
+		}
+		
+	</style>
+	<script>
+		
+	</script>
+</head>
+<body id="displayArea">
+	<div id="chatArea">
+		<div class="message">
+			<div>
+				<span class="user">Eu</span>
+				<span class="date">1 min ago</span>
+			</div>
+			
+		</div>
+		
+	</div>
+<div id="textBox">
+			<textarea id="messageBox"></textarea>
+			<button onclick="send">Send</button>
+		</div>
+</body>
+</html>
