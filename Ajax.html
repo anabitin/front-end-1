@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ajax Curs Valutar</title>
+	<script>
+		async function getCursValutar {
+			var response = await fetch(http://data.fixer.io/api/latest?access_key=bab6dc180ed5d2d17a7bd00df96ba187);
+			var rezultat = await response.json();
+		} 
+	</script>
+
+</head>
+<body>
+	<table border="1" style="border-collapse: border">
+		<thead>
+		<tr>
+			<td>Moneda</td>
+			<td>Ieri</td>
+			<td>Azi</td>
+		</tr>
+		</thead>
+		<tbody>
+			<tr>
+			<td>Ron</td>
+			<td>4.87885</td>
+			<td>4.77885</td>
+			<td><img src=""red arrow.png></td>
+			td><img src=""green arrow.png></td>
+		</tr>
+		<tr>
+			<td>Ron</td>
+			<td>4.87885</td>
+			<td>4.77885</td>
+			<td>4.77885</td>
+		</tr>
+			
+		</tbody>
+	</table>
+
+</body>
+</html>

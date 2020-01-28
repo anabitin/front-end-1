@@ -1,0 +1,33 @@
+		.display{
+			width: auto;
+			height: auto;
+		}
+		.text{
+			display: inline-flex;
+			align-items: center;
+			width: 75%;
+
+
+		}
+		.img{
+			padding-right: 20px;
+		}
+		.img1{
+			padding-right: 20px;
+		}
+		.header{
+			display: flex;
+			justify-content: space-between;
+
+		}
+		.btn{
+			height: 30px;
+			background-color: #48a2a3;
+			padding: 0px;
+
+		}
+		.text1{
+			align-items: center;
+			display: inline-flex;
+			width: 75%; 
+		}

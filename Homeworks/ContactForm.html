@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Form</title>
+	<link href="https://fonts.googleapis.com/css?family=Acme|Roboto+Slab&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet">
+	<script>
+
+
+		function validate(event){
+			event.preventDefault();
+			var valid=true;
+
+			var prenume = document.querySelector("[name='prenumClient']").value;
+			var nume = document.querySelector("[name='numeClient']").value;
+			var gender = document.querySelector("[name='gen']").value;
+			var digits = /\d+/g;
+
+			
+			
+			if(prenume.length<3){
+				document.querySelector("[name='prenumClient']").classList.add("eroare");
+				valid=false;
+			} else {
+				document.querySelector("[name='prenumClient']").classList.remove("eroare")
+			};
+
+			if(nume.length<3){
+				document.querySelector("[name='numeClient']").classList.add("eroare");
+				valid=false;
+			} else{
+				document.querySelector("[name='numeClient']").classList.remove("eroare")
+			};
+
+			if(digits.test(prenume)){
+				valid=false;
+				document.querySelector("[name='prenumClient']").classList.add("eroare");
+			};
+				
+			if(digits.test(nume)){
+				valid=false;
+				document.querySelector("[name='numeClient']").classList.add("eroare");
+			}
+
+			console.log("Nume client:" + document.querySelector("[name='prenumClient']").value + " "+ document.querySelector("[name='numeClient']").value);
+			console.log("Gender:" + document.querySelector("[name='gen']").value);
+			
+			
+			if(valid){
+				show(prenume);
+			}
+
+			document.querySelector("[name='prenumClient']").value = "";
+			document.querySelector("[name='numeClient']").value = "";
+		}
+		
+		function show (prenume){
+
+			var banner = document.querySelector("p");
+			var nume = document.querySelector("[name='prenumClient']").value
+			if(validate){bannerText ="Felicitari " + nume + ", te-ai inscris cu succes"
+			banner.textContent = bannerText;
+
+		
+			banner.classList.remove("paragraf");
+			return true;
+		} else{
+			return false;
+		}
+			
+			
+
+
+
+
+
+		}
+		
+
+			
+			
+
+		
+		
+	</script>
+	<style>
+		.paragraf1{
+			background-color: #f0cd99;
+			padding: 8px;
+			border-radius: 10px;
+			width:450px;
+			color: #e85510;
+			margin: auto;
+			text-align: center;
+			font-family: 'Cabin', sans-serif;
+			font-weight: bold;
+
+
+			}
+        .paragraf{
+        	display: none;
+        	       	
+        }
+        
+        	
+        
+		.eroare{
+			border:1.5px solid red;
+		}
+		.container{
+			display: flex;
+			align-items: center;
+			margin: 0 auto;
+			flex-direction: column;
+			padding: 4 rem 1.5rem;
+			position: relative;
+			width: 100%;
+		}
+		.formular{
+			border: 5px solid #e6ac49;
+		    display: inline flex;
+		    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+		    max-width: 550px;
+		    padding: 1rem;
+		    width: 100%;
+		    background-color: #f7eb8b;
+		}
+		
+		
+		
+		.name{
+			border-left: 3px solid #de664b;
+			display: flex;
+			flex-direction: column;
+			margin: 1px;
+			padding: 4px;
+			padding-top: 10px;
+			padding-left: 10px;
+			font-weight: bold;
+		}
+
+		.submit{
+			background-color: #de664b;
+			color: white;
+			padding: 7px;
+			
+			cursor: pointer;
+			display: flex;
+			flex-direction: column;
+			margin: 1px;
+		}
+		.com{
+			
+			user-select: text;
+			resize: auto;
+		    cursor: auto;
+		    white-space: pre-wrap;
+		    word-wrap: break-word;
+
+		}
+		
+
+	
+
+		
+	</style>
+
+</head>
+<body>
+	<div class="container">
+		<p class="paragraf1 paragraf"></p>
+		
+			<h1 class="title"> Contact Form </h1>
+			<form class="formular" onsubmit="validate(event);">
+				<div style="display: flex;flex-direction: column; float: right;padding-top: 15px;">
+							<img  src="Contact Form/Formular.png">
+						</div>
+				
+					<div class="name">
+
+						<label> First Name <input type="text" name="prenumClient"></label>
+						<br>
+						<br>
+						<label> Last Name <input type="text" name="numeClient"></label>
+						<br>
+						<br>
+						<label> Gender <input type="radio" name="gen" value="Female"> F <input type="radio" name="gen" value="Male"> M </label> 
+
+						
+					</div>
+					<br>
+					<br>
+					
+						
+						<div style=" color: black; font-size: 14px; font-weight: bold; display: flex; flex-direction: column;width: 45%;"> Comment:
+							<br>
+							<br>
+							<textarea class="com" name="comment">  </textarea>
+						</div>
+						<br>
+						<br>
+						<div style="width: 50%;">
+							<input class="submit" type="submit" name="buton">
+						</div>
+						<br>
+						<span id="banner-close">
+				
+						</span>
+						
+
+						
+			
+		</div>
+
+											
+				
+			</form>
+		
+	</div>
+</body>
+</html>
