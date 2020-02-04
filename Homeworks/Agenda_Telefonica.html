@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Agenda</title>
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto+Mono&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Acme|Josefin+Sans|Roboto+Mono&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Acme|Josefin+Sans|Roboto+Mono|Ropa+Sans&display=swap" rel="stylesheet">
+	<script>
+		var list = [];
+		var indexEdit;
+		document.addEventListener("DOMContentLoaded", function(){
+			var buton = document.querySelector(".btn");
+			
+			var digits = /^\d+$/;
+			
+
+			buton.addEventListener("click", function (){
+
+				var nume = document.querySelector("[name='Nume']").value;
+				var telefon = document.querySelector("[name='numarTelefon']").value;
+
+				var table = document.querySelector(".table");
+				list.push({
+					Name: nume,
+					PhoneNumber: telefon
+				})
+
+				console.log(list);
+
+				draw();
+				
+				//var numeTabel = document.querySelector("#NAME");
+				//var telefonTabel = document.querySelector("#PHONE");
+
+				//numeTabel.innerHTML = nume;
+				//telefonTabel.innerHTML = telefon;
+
+				document.querySelector("[name='Nume']").value = "";
+				document.querySelector("[name='numarTelefon']").value = "";
+
+			})
+
+			
+			
+
+			
+
+
+
+		})
+			function draw(){
+				var template = "";//stocheaza HTML genarat la array ul din var list
+				var table = document.querySelector(".table");
+					for (var i = 0; i < list.length; i++) {
+						var item = list[i];
+						template += `
+												
+									<tr>
+										<td class="tableData">${item.Name}</td>
+										<td class="tableData">${item.PhoneNumber}</td>
+										<td><img class="icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCr-fw6SN9Uj_d_0i9MoTtZaOYE3nZzrVqp-kAy78zkZhLaFXu&s" onclick="del(${i})"></td>
+										<td><img class="icon" src="data:image/png;base64,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" onclick="edit(${i})"></td>
+									</tr>
+								`
+
+					}
+
+					table.innerHTML= template;
+
+			}
+
+				function del(idx) {
+				if(confirm(`Esti sigur ca vrei sa stergi ${list[idx].Name} si ${list[idx].PhoneNumber} ?`)){
+					list.splice(idx,2);
+					draw();
+					}
+				}
+
+				function edit(idx){
+					document.querySelector("[name='Nume']").value = list[idx].Name
+					document.querySelector("[name='numarTelefon']").value = list[idx].PhoneNumber
+					window.indexEdit=idx;
+				}
+
+
+		
+		
+	</script>
+	<style>
+		
+
+		.container{
+			display: flex;
+			margin: 0 auto;
+			flex-direction: column;
+			position: relative;
+			width: 100%;
+			border-color: #8c8f8d;
+			align-items: center;
+
+		}
+
+		.main{
+			border: 3px solid #4fd6c2;
+			max-width: 550px;
+			padding: 1rem;
+			width: 100%;
+			background-color:#baf5ec;
+
+		}
+		
+		.container1{
+			border: 3px solid #4fd6c2;
+			max-width: 550px;
+			padding: 1rem;
+			width: 100%;
+			background-color:#baf5ec;
+
+		}
+
+		.title{
+			display: block;
+			margin: 0 auto;
+			position: relative;
+			align-items: center;
+			margin-left: 35%;
+			font-family: 'Josefin Sans', sans-serif;
+
+			
+		}
+		#inbox{
+			font-family: 'Acme', sans-serif;
+			margin-right: 10%;
+			;
+
+		}
+		#input{
+			border: 1px solid #4fd6c2;
+			padding-left: 5px;
+			
+		}
+		.btn{
+			display: block;
+			position: relative;
+			margin-left: 37%;
+			background-color: #38f5cc;
+			border-radius: 5px;
+			padding: 4px;
+			border-color: #4fd6c2;
+			font-family: 'Ropa Sans', sans-serif;
+			color: white;
+		}
+
+		.table1{
+			width:100%;
+			border-collapse:collapse;
+			
+	
+
+		}
+
+		.icon{
+			width:20px;
+			height:20px;
+			margin-right:10px;
+		}
+
+	</style>
+</head>
+<body class="container">
+	<div class="main" onsubmit="add(event);">
+		<h1 class="title">Agenda</h1>
+		<br>
+		<br>
+		<span id="inbox"> Nume <input id="input" type="text" name="Nume"></span>
+		<span id="inbox">Telefon <input id="input" type="text" name="numarTelefon"></span>
+		<br>
+		<br>
+		<br>
+		<button class="btn">Adauga Contact</button>
+	</div>
+	<br>
+	<div class="container1">
+		<table class="table1">
+			<thead>
+				<tr>
+					<th>Nume</th>
+					<th>Telefon</th>
+					
+				</tr>
+			</thead>
+			<tbody class="table">
+				<tr>
+					<td id="NAME"></td>
+					<td id="PHONE"></td>
+					<td>
+						<img class="icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCr-fw6SN9Uj_d_0i9MoTtZaOYE3nZzrVqp-kAy78zkZhLaFXu&s" onclick="del()">
+					</td>
+					<td>
+						<img class="icon" src="data:image/png;base64,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" onclick="edit()">
+					</td>
+				</tr>
+				
+			</tbody>
+		</table>
+		
+	</div>
+
+</body>
+</html>
